@@ -85,3 +85,35 @@ body {
     height: 500px;
     z-index: 1;
 }
+
+@media (min-width: 1080px) {
+    .search-box {
+        width: 40%;
+        margin: 30px;
+    }
+
+    .ip-info-box {
+        width: 70%;
+        height: 140px;
+        margin-top: 20px;
+    }
+
+    .ip-info-list {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .ip-info-item{
+        margin: 0;
+        padding-left: 15px;
+        padding-right: 60px;
+        text-align: left;
+        border-right: 1px solid rgba(230,230,230); 
+    }
+
+    .ip-info-item:last-child {
+        border-right: none;    
+    }
+}
