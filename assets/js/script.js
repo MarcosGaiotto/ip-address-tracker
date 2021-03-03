@@ -22,11 +22,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchButton = document.getElementById("search-btn");
     const searchInput = document.getElementById("ip");
 
+    searchInput.value = "LOADING...";
+
     getIp().then(() => {
         getIpInformations(informationsTracker, ipInformations.ip).then(() => {
             setInformationsOnDocument();
             generateMap(ipInformations.latitude, ipInformations.longitude);
             searchInput.disabled = false;
+            searchInput.value = "";
         });
     });
 
